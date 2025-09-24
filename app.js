@@ -19,4 +19,13 @@ function agregarAmigo() {
 
  amigos.push(nombre);
 
- 
+     const lista = document.getElementById('listaAmigos');
+    const li = document.createElement('li');
+    li.textContent = nombre;
+    li.classList.add('name-item'); // Opcional: añade una clase para estilizar
+    lista.appendChild(li);
+
+    inputNombre.value = '';
+    
+    // Ocultar la lista de resultados si estaba visible
+    document.getElementById('resultado').innerHTML = '';
